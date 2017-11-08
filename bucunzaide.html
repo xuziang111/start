@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>一个不忍直视的导航网站</title>
+  <style>
+    *{
+      margin:0;
+      padding:0px;
+    }
+    kbd {
+      display:inline-block;
+      border:1px solid red;
+      width:4em;
+      height:4em;
+      margin-left:1em;
+      position:relative;
+    }
+    div div:nth-child(3){
+      margin-left:2em;
+    }
+    div div:nth-child(4){
+      margin-left:5em;
+    }
+    div{
+      text-align:center;
+    }
+    button{
+      position:absolute;
+      bottom:0;
+      left:0;
+      display:none;
+    }
+    kbd:hover button{
+      display:inline-block;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div id = 'kb'>
+      
+    </div>
+  </main>  
+  
+  
+  
+  <script>
+    var a = [  
+            ['1','2','3','4','5','6','7','8','9','0'],
+            ['q','w','e','r','t','y','u','i','o','p'],
+            ['a','s','d','f','g','h','j','k','l'],
+            ['z','x','c','v','b','n','m'],
+            ];
+    
+    var hash = {
+      '1':'163.com',
+      '2':'baidu.com',
+      '3':'acfun.tv',
+      '4':'github.com',
+      '5':'',
+      '6':'',
+      '7':'',
+      '8':'',
+      '9':'',
+      '0':'',
+      'q':'qq.com',
+      'w':'weibo.com',
+      'e':'exhentai.org',
+      'r':'#',
+      't':'taobao.com',
+      'y':'#',
+      'u':'',
+      'i':'iqiyi.com',
+      'o':'',
+      'p':'',
+      'a':'amazon.co.jp',
+      's':'',
+      'd':'douban.com',
+      'f':'facebook.com',
+      'g':'google.com',
+      'h':'',
+      'j':'',
+      'k':'',
+      'l':'',
+      'z':'zhaopin.com',
+      'x':'xunlei.com',
+      'c':'chiphell.com',
+      'v':'v3ex.com',
+      'b':'bilibili.com',
+      'n':'',
+      'm':'meituan.com',      
+    };
+    var index,index2;
+    for(index = 0;index<a.length;index++){
+      var divn = document.createElement('div');
+      var row = a[index];
+      kb.appendChild(divn);
+      for(index2=0;index2<row.length;index2++){
+        var kbdn = document.createElement('kbd');
+        divn.appendChild(kbdn);
+        kbdn.textContent = row[index2];
+        var buttonn = document.createElement('button');
+        buttonn.textContent = '编辑';
+        kbdn.appendChild(buttonn);
+        buttonn.id = row[index2];
+        buttonn.onclick = function(btn){
+		console.log(btn['target']['id']);
+         var key=  btn['target']['id'];
+         var x = prompt('更改网址');
+         hash[key] = x; 
+        };
+
+      };
+    };
+   document.onkeypress = function (keyb){
+      window.open('http://' + hash[keyb.key],'_blank'); 
+    };
+    
+    
+  </script>  
+</body>
