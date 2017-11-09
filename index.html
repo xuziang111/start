@@ -91,6 +91,10 @@
       'n':'',
       'm':'meituan.com',      
     };
+    var hashInLocalStorage = JSON.parse(localStorage.getItem('wangzhi')||'null');
+    if(hashInLocalStorage){
+	hash = hashInLocalStorage;
+	};
     var index,index2;
     for(index = 0;index<a.length;index++){
       var divn = document.createElement('div');
@@ -105,12 +109,12 @@
         kbdn.appendChild(buttonn);
         buttonn.id = row[index2];
         buttonn.onclick = function(btn){
-		console.log(btn['target']['id']);
-         var key=  btn['target']['id'];
-         var x = prompt('更改网址');
-         hash[key] = x; 
+	console.log(btn['target']['id']);
+        var key=  btn['target']['id'];
+        var x = prompt('更改网址');
+        hash[key] = x; 
+        localstorage.setItem('wangzhi',JSON.stringify(hash));
         };
-
       };
     };
    document.onkeypress = function (keyb){
