@@ -124,7 +124,7 @@
         var key=  btn['target']['id'];
         var x = prompt('更改网址 格式 例：qq.com',hash[key]);
 	if (x === null) {
-        return;
+        break;
         }else{	
         hash[key] = x; 
         localStorage.setItem('wangzhix',JSON.stringify(hash));
