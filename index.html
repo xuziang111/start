@@ -91,7 +91,7 @@
       'n':'',
       'm':'meituan.com',      
     };
-    var hashInLocalStorage = JSON.parse(localStorage.getItem('wangzhi')||'');
+    var hashInLocalStorage = JSON.parse(localStorage.getItem('wangzhi'||'null');
     if(hashInLocalStorage){
 	hash = hashInLocalStorage;
 	};
