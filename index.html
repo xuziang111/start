@@ -91,10 +91,10 @@
       'n':'',
       'm':'meituan.com',      
     };
-    //var hashInLocalStorage = JSON.parse(localStorage.getItem('wangzhin'||'null');
-   /*if(hashInLocalStorage){
+    var hashInLocalStorage = JSON.parse(localStorage.getItem('wangzhin'||'null');
+   if(hashInLocalStorage){
 	hash = hashInLocalStorage;
-	};*/
+	};
     var index,index2;
     for(index = 0;index<a.length;index++){
       var divn = document.createElement('div');
@@ -102,11 +102,11 @@
       kb.appendChild(divn);
       for(index2=0;index2<row.length;index2++){
         var kbdn = document.createElement('kbd');
-	var brn = document.createElement('br');
         divn.appendChild(kbdn);
         kbdn.textContent = row[index2];
-	//kbdn.appendChild(brn);
-        //kbdn.textContent =hash[row[index2]];
+	var pn = document.createElement('p');      
+	kbdn.appendChild(pn);
+        pn.textContent =hash[row[index2]];
 	kbdn.id = row[index2];
 	kbdn.onclick = function(keyb) {
           var y = keyb['target']['id'];
