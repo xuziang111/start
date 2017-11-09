@@ -120,7 +120,7 @@
         buttonn.onclick = function(btn){
 	console.log(btn['target']['id']);
         var key=  btn['target']['id'];
-        var x = prompt('更改网址');
+        var x = prompt('更改网址',hash[key]);
         hash[key] = x; 
         localStorage.setItem('wangzhix',JSON.stringify(hash));
         };
