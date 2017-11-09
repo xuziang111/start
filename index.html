@@ -91,7 +91,7 @@
       'n':'',
       'm':'meituan.com',      
     };
-    var hashInLocalStorage = JSON.parse(localStorage.getItem('wangzhi'||'null');
+    var hashInLocalStorage = JSON.parse(localStorage.getItem('wangzhin'||'null');
     if(hashInLocalStorage){
 	hash = hashInLocalStorage;
 	};
@@ -122,7 +122,7 @@
         var key=  btn['target']['id'];
         var x = prompt('更改网址');
         hash[key] = x; 
-        localStorage.setItem('wangzhi',JSON.stringify(hash));
+        localStorage.setItem('wangzhin',JSON.stringify(hash));
         };
       };
     };
