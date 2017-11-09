@@ -60,35 +60,35 @@
       '4':'github.com',
       '5':'gitter.im',
       '6':'lolimy.club',
-      '7':'#',
-      '8':'#',
-      '9':'#',
+      '7':'#.',
+      '8':'#.',
+      '9':'#.',
       '0':'lolimy.club/start',
       'q':'qq.com',
       'w':'weibo.com',
       'e':'exhentai.org',
-      'r':'#',
+      'r':'#.',
       't':'taobao.com',
-      'y':'#',
-      'u':'#',
+      'y':'#.',
+      'u':'#.',
       'i':'iqiyi.com',
-      'o':'#',
-      'p':'#',
+      'o':'#.',
+      'p':'#.',
       'a':'amazon.co.jp',
-      's':'#',
+      's':'#.',
       'd':'douban.com',
       'f':'facebook.com',
       'g':'google.com',
-      'h':'#',
-      'j':'#',
-      'k':'#',
-      'l':'#',
+      'h':'#.',
+      'j':'#.',
+      'k':'#.',
+      'l':'#.',
       'z':'zhaopin.com',
       'x':'xunlei.com',
       'c':'chiphell.com',
       'v':'v3ex.com',
       'b':'bilibili.com',
-      'n':'#',
+      'n':'#.',
       'm':'meituan.com',      
     };
     var hashInLocalStorage = JSON.parse(localStorage.getItem('wangzhin'||'null'));
@@ -104,7 +104,7 @@
         var kbdn = document.createElement('kbd');
         divn.appendChild(kbdn);
         kbdn.textContent = row[index2];
-	var ht = /\w*\./i.exec(hash[row[index2]]);
+	var ht = /\w*/.exec(/\w*\./i.exec(hash[row[index2]]));
 	var pn = document.createElement('p');      
 	kbdn.appendChild(pn);
         pn.textContent = ht;
@@ -121,7 +121,7 @@
         buttonn.onclick = function(btn){
 	console.log(btn['target']['id']);
         var key=  btn['target']['id'];
-        var x = prompt('更改网址',hash[key]);
+        var x = prompt('更改网址 格式 例：qq.com',hash[key]);
         hash[key] = x; 
         localStorage.setItem('wangzhix',JSON.stringify(hash));
 	btn.stopPropagation();
