@@ -111,8 +111,8 @@
         pn.textContent = ht;
 	kbdn.id = row[index2];
 	pn.onclick = function(keyb) {
-	var z = keyb.parentNode().id;
-		window.open('http://' + hash[z],'_blank');
+	var z = keyb.parentNode.id;
+	window.open('http://' + hash[z],'_blank');
 	btn.stopPropagation();
 	};
 	kbdn.onclick = function(keyb) {
