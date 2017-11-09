@@ -104,7 +104,7 @@
         var kbdn = document.createElement('kbd');
         divn.appendChild(kbdn);
         kbdn.textContent = row[index2];
-	var ht = /\w*/.exec(/\w*\./i.exec(hash[row[index2]]));
+	var ht = /.*/.exec(/.*\./i.exec(hash[row[index2]]));
 	var pn = document.createElement('p');      
 	kbdn.appendChild(pn);
         pn.textContent = ht;
