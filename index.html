@@ -58,12 +58,12 @@
       '2':'baidu.com',
       '3':'acfun.tv',
       '4':'github.com',
-      '5':'',
-      '6':'',
+      '5':'gitter.im',
+      '6':'lolimy.club',
       '7':'',
       '8':'',
       '9':'',
-      '0':'',
+      '0':'lolimy.club/start',
       'q':'qq.com',
       'w':'weibo.com',
       'e':'exhentai.org',
@@ -104,6 +104,12 @@
         var kbdn = document.createElement('kbd');
         divn.appendChild(kbdn);
         kbdn.textContent = row[index2];
+	kbdn.id = row[index2];
+	kbdn.onclick = function(keyb) {
+          var y = keby['target']['id'];
+          window.open('http://' + hash[y],'_blank');
+        }; 
+	      
         var buttonn = document.createElement('button');
         buttonn.textContent = '编辑';
         kbdn.appendChild(buttonn);
@@ -120,7 +126,6 @@
    document.onkeypress = function (keyb){
       window.open('http://' + hash[keyb.key],'_blank'); 
     };
-    
     
   </script>  
 </body>
