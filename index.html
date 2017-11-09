@@ -123,6 +123,7 @@
         var x = prompt('更改网址',hash[key]);
         hash[key] = x; 
         localStorage.setItem('wangzhix',JSON.stringify(hash));
+	btn.stopPropagation();
         };
       };
     };
