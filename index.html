@@ -123,7 +123,7 @@
 	console.log(btn['target']['id']);
         var key=  btn['target']['id'];
         var x = prompt('更改网址 格式 例：qq.com',hash[key]);
-	if (prompt("input", "") === null) {
+	if (x === null) {
         return;
         }else{	
         hash[key] = x; 
