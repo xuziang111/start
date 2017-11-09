@@ -91,10 +91,10 @@
       'n':'',
       'm':'meituan.com',      
     };
-    var hashInLocalStorage = JSON.parse(localStorage.getItem('wangzhin'||'null');
-    if(hashInLocalStorage){
+    //var hashInLocalStorage = JSON.parse(localStorage.getItem('wangzhin'||'null');
+   /*if(hashInLocalStorage){
 	hash = hashInLocalStorage;
-	};
+	};*/
     var index,index2;
     for(index = 0;index<a.length;index++){
       var divn = document.createElement('div');
@@ -122,7 +122,7 @@
         var key=  btn['target']['id'];
         var x = prompt('更改网址');
         hash[key] = x; 
-        localStorage.setItem('wangzhin',JSON.stringify(hash));
+        localStorage.setItem('wangzhix',JSON.stringify(hash));
         };
       };
     };
