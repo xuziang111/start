@@ -69,6 +69,7 @@
 	}
   footer{
     position:flex;
+    display:inline-block;
     height:20px;
     width:100%;
     bottom:0;
