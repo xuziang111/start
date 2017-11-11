@@ -99,6 +99,9 @@
       };
     };
    document.onkeypress = function (keyb){
+     if(hash[keyb.key]){
+       console.log(hash[keyb]);
       window.open('http://' + hash[keyb.key],'_blank'); 
+     }
     };
     
