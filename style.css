@@ -68,7 +68,7 @@
     top:2px;
 	}
   footer{
-    position:absolute;
+    position:flex;
     height:20px;
     width:100%;
     bottom:0;
