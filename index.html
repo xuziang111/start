@@ -8,13 +8,46 @@
       margin:0;
       padding:0px;
     }
+	body{
+	background:#F2F2F2 url(./tu.png) no-repeat;
+	background-size:cover;
+	}
+	main {
+	text-align:center;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height:100vh;
+	}
+	#kb{
+		background:rgba(255,255,255,0.1);
+	    border-radius:10px;
+	}
+	#kb div{
+	  margin-top:10px;
+	  margin-right:18px;
+	}
+	#kb div img{
+	width:16px;
+	height:16px;
+	position:absolute;
+	bottom:3px;
+	left:3px;
+	}
+
     kbd {
       display:inline-block;
-      border:1px solid red;
       width:4em;
       height:4em;
       margin-left:1em;
       position:relative;
+	  font-family:keyboard, 'Arial Rounded',Helvetica, Arial, sans-serif;
+	  font-size:18px;
+	  background-color:#000;
+	  color:#fff;
+	  box-shadow:2px 2px 2px rgba(0,0,0,0.5);
+	  border-radius:7px;
+	  cursor:pointer;
     }
     div div:nth-child(3){
       margin-left:2em;
@@ -22,19 +55,24 @@
     div div:nth-child(4){
       margin-left:4em;
     }
-    div{
-      text-align:center;
-      margin-top:10px;	    
-    }
     button{
       position:absolute;
       bottom:0;
-      left:0;
+      right:0;
       display:none;
+	  border-radius:3px;
+	  background-color:#000;
+	  color:#fff;
+	  border:none;
     }
     kbd:hover button{
       display:inline-block;
     }
+	div span{
+	  position:absolute;
+	  left:4px;
+	  top:2px;
+	}
   </style>
 </head>
 <body>
@@ -104,13 +142,17 @@
       for(index2=0;index2<row.length;index2++){
         var kbdn = document.createElement('kbd');
         divn.appendChild(kbdn);
-        kbdn.textContent = row[index2];
-	var ht = /\w*#?/.exec(/.*\./i.exec(hash[row[index2]]));
-	var pn = document.createElement('p');      
-	kbdn.appendChild(pn);
-        pn.textContent = ht;
+		var spann = document.createElement('span');
+        spann.textContent = row[index2];
+		kbdn.appendChild(spann);
+	//var ht = /\w*#?/.exec(/.*\./i.exec(hash[row[index2]]));   
 	kbdn.id = row[index2];
-	pn.onclick = function(keyb) {
+	
+	var imgn = document.createElement('img');
+	imgn.src ='http://' + hash[row[index2]] + '/favicon.ico';
+	kbdn.appendChild(imgn);
+	
+	imgn.onclick = function(keyb) {
 	var z = this.parentNode.id;
 	window.open('http://' + hash[z],'_blank');
 	keyb.stopPropagation();
@@ -119,7 +161,7 @@
           var y = keyb['target']['id'];
           window.open('http://' + hash[y],'_blank');
         }; 
-	      
+
         var buttonn = document.createElement('button');
         buttonn.textContent = '编辑';
         kbdn.appendChild(buttonn);
