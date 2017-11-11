@@ -33,7 +33,7 @@
     'g':'google.com',
     'h':'',
     'j':'JD.com',
-    'k':'http://konachan.net/',
+    'k':'konachan.net',
     'l':'lolimy.club',
     'z':'zhaopin.com',
     'x':'xunlei.com',
@@ -62,7 +62,7 @@
 	      kbdn.id = row[index2];
 	      var imgn = document.createElement('img');
 	      if (hash[row[index2]]){
-	        imgn.src ='http://' + hash[row[index2]] + '/favicon.ico';
+	        imgn.src ='https://' + hash[row[index2]] + '/favicon.ico';
 	      }else{
 	        imgn.src = './tuer.png';
 	      }
@@ -73,12 +73,12 @@
 	
 	      imgn.onclick = function(keyb) {
 	        var z = this.parentNode.id;
-	        window.open('http://' + hash[z],'_blank');
+	        window.open('https://' + hash[z],'_blank');
 	       keyb.stopPropagation();
 	      };
 	      kbdn.onclick = function(keyb) {
           var y = keyb['target']['id'];
-          window.open('http://' + hash[y],'_blank');
+          window.open('https://' + hash[y],'_blank');
         }; 
 
         var buttonn = document.createElement('button');
@@ -92,7 +92,7 @@
 	        if (x !== null) {	
             hash[key] = x; 
             localStorage.setItem('wangzhix',JSON.stringify(hash));
-	        	bt2.previousSibling.src='http://' + x + '/favicon.ico';
+	        	bt2.previousSibling.src='https://' + x + '/favicon.ico';
 	        };
 	        btn.stopPropagation();
         };
@@ -101,7 +101,7 @@
    document.onkeypress = function (keyb){
      if(hash[keyb.key]){
        console.log(hash[keyb]);
-      window.open('http://' + hash[keyb.key],'_blank'); 
+      window.open('https://' + hash[keyb.key],'_blank'); 
      }
     };
     
