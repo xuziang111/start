@@ -55,9 +55,9 @@
       for(index2=0;index2<row.length;index2++){
         var kbdn = document.createElement('kbd');
         divn.appendChild(kbdn);
-		    var spann = document.createElement('span');
+        var spann = document.createElement('span');
         spann.textContent = row[index2];
-		    kbdn.appendChild(spann);
+        kbdn.appendChild(spann);
 	      //var ht = /\w*#?/.exec(/.*\./i.exec(hash[row[index2]]));   
 	      kbdn.id = row[index2];
 	      var imgn = document.createElement('img');
@@ -73,12 +73,21 @@
 	
 	      imgn.onclick = function(keyb) {
 	        var z = this.parentNode.id;
+		      if(/https/i.test(hash[z])){
+          window.open(hash[z],'_blank')
+         }else{
 	        window.open('http://' + hash[z],'_blank');
+	 }
 	       keyb.stopPropagation();
 	      };
 	      kbdn.onclick = function(keyb) {
+	var y = keyb['target']['id'];
+	if(/https/i.test(hash[y])){
+          window.open(hash[y],'_blank')
+         }else{
           var y = keyb['target']['id'];
           window.open('http://' + hash[y],'_blank');
+         }
         }; 
 
         var buttonn = document.createElement('button');
@@ -100,7 +109,7 @@
     };
    document.onkeypress = function (keyb){
      if(hash[keyb.key]){
-       if(/https:\/\//i.test(hash[keyb.key])){
+       if(/https/i.test(hash[keyb.key])){
          window.open(hash[keyb.key],'_blank')
        }else{
          window.open('http://' + hash[keyb.key],'_blank'); 
