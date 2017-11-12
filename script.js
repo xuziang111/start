@@ -6,10 +6,10 @@
     ];
     
     var hash = {
-    '1':'lolimy.club/start',
+    '1':'github.com',
     '2':'baidu.com',
     '3':'acfun.tv',
-    '4':'github.com',
+    '4':'4chan.org',
     '5':'gitter.im',
     '6':'alpha.wallhaven.cc',
     '7':'jd.com',
