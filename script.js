@@ -101,7 +101,7 @@
         buttonn.onclick = function(btn){
 	        var bt2 = btn['target'];		
           var key=  btn['target']['id'];
-          var x = prompt("更改网址 格式 例：qq.com\n能打开网址但无法抓取ico可尝试用'https://' + '网址'",hash[key]);
+          var x = prompt("更改网址 格式 例：qq.com\n能打开网址但无法抓取ico可尝试用'https://' + 网址\n键盘上按对应的键即可打开网站",hash[key]);
 	        if (x !== null) {	
             hash[key] = x; 
             localStorage.setItem('wangzhix',JSON.stringify(hash));
