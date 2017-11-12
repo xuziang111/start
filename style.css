@@ -81,3 +81,7 @@ a｛
   text-decoration: none;
   color:#789;
 ｝
+a:visited {
+  color: #789;
+  text-decoration: none; 
+}
