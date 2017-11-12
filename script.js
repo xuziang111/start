@@ -104,6 +104,7 @@
          window.open(hash[keyb.key],'_blank')
        }else{
          window.open('http://' + hash[keyb.key],'_blank'); 
+       }
      }
     };
     
