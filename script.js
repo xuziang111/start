@@ -12,7 +12,7 @@
     '4':'4chan.org',
     '5':'gitter.im',
     '6':'alpha.wallhaven.cc',
-    '7':'jd.com',
+    '7':'https://www.jd.com',
     '8':'v.youku.com',
     '9':'twitter.com',
     '0':'163.com',
