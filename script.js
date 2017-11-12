@@ -13,7 +13,7 @@
     '5':'gitter.im',
     '6':'alpha.wallhaven.cc',
     '7':'jd.com',
-    '8':'',
+    '8':'youku.com',
     '9':'twitter.com',
     '0':'163.com',
     'q':'qq.com',
