@@ -62,7 +62,7 @@
 	      kbdn.id = row[index2];
 	      var imgn = document.createElement('img');
 	      if (hash[row[index2]]){
-		if(/https/i.test(hash[row[index2])){
+		if(/https/i.test(hash[row[index2]])){
 	          imgn.src = hash[row[index2]] + '/favicon.ico';	 
 		}else{
 	          imgn.src ='http://' + hash[row[index2]] + '/favicon.ico';
