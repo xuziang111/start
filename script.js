@@ -33,14 +33,14 @@
     'g':'google.com',
     'h':'hao123.com',
     'j':'jianshu.com',
-    'k':'konachan.net',
+    'k':'https://konachan.net',
     'l':'lolimy.club',
     'z':'zhihu.com',
     'x':'xunlei.com',
     'c':'chiphell.com',
     'v':'v2ex.com',
     'b':'bilibili.com',
-    'n':'nyaa.si',
+    'n':'https://nyaa.si',
     'm':'meituan.com',      
     };
     var hashInLocalStorage = JSON.parse(localStorage.getItem('wangzhin'||'null'));
@@ -88,7 +88,7 @@
         buttonn.onclick = function(btn){
 	        var bt2 = btn['target'];		
           var key=  btn['target']['id'];
-          var x = prompt('更改网址 格式 例：qq.com',hash[key]);
+          var x = prompt("更改网址 格式 例：qq.com\n能打开网址但无法抓取ico可尝试用'https://' + '网址'",hash[key]);
 	        if (x !== null) {	
             hash[key] = x; 
             localStorage.setItem('wangzhix',JSON.stringify(hash));
@@ -100,8 +100,10 @@
     };
    document.onkeypress = function (keyb){
      if(hash[keyb.key]){
-       console.log(hash[keyb]);
-      window.open('http://' + hash[keyb.key],'_blank'); 
+       if(/https:\/\//i.test(hash[keyb.key])){
+         window.open(hash[keyb.key],'_blank')
+       }else{
+         window.open('http://' + hash[keyb.key],'_blank'); 
      }
     };
     
