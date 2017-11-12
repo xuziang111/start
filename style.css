@@ -70,7 +70,8 @@
   footer{
     position:flex;
     display:inline-block;
-    height:40px;
+    height:20px;
+    line-height:20px;
     width:100%;
     bottom:0;
     background:rgba(105,105,105,0.3);
