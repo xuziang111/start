@@ -15,7 +15,7 @@
     '7':'https://www.jd.com',
     '8':'v.youku.com',
     '9':'twitter.com',
-    '0':'163.com',
+    '0':'https://saucenao.com',
     'q':'qq.com',
     'w':'weibo.com',
     'e':'exhentai.org',
