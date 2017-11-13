@@ -85,8 +85,8 @@
 	       keyb.stopPropagation();
 	      };
 	      kbdn.onclick = function(keyb) {
-	var y = keyb['target']['id'];
-	if(/https/i.test(hash[y])){
+	      var y = keyb['target']['id'];
+	      if(/https/i.test(hash[y])){
           window.open(hash[y],'_blank')
          }else{
           var y = keyb['target']['id'];
