@@ -43,6 +43,7 @@
     'n':'https://nyaa.si',
     'm':'meituan.com',      
     };
+
     var hashInLocalStorage = JSON.parse(localStorage.getItem('wangzhin'||'null'));
     if(hashInLocalStorage){
 	    hash = hashInLocalStorage;
