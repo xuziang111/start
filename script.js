@@ -112,13 +112,25 @@
         };
       };
     };
-   document.onkeypress = function (keyb){
-     if(hash[keyb.key]){
-       if(/https/i.test(hash[keyb.key])){
-         window.open(hash[keyb.key],'_blank')
-       }else{
-         window.open('http://' + hash[keyb.key],'_blank'); 
-       }
+
+    function pressEvent(keyb){
+      if(hash[keyb.key]){
+        if(/https/i.test(hash[keyb.key])){
+          window.open(hash[keyb.key],'_blank')
+        }else{
+          window.open('http://' + hash[keyb.key],'_blank'); 
+        }
+      }
      }
-    };
+
+   document.addEventListener('keypress' , pressEvent)
+   console.log( document.getElementById('search'))
+   document.getElementById('search').addEventListener('focus',function(){
+     console.log('a')
+    document.removeEventListener('keypress' , pressEvent) 
+   })
+   document.getElementById('search').addEventListener('blur',function(){
+    console.log('b')
+   document.addEventListener('keypress' , pressEvent) 
+  })
     
